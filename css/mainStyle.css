@@ -1,0 +1,606 @@
+@import url('https://fonts.googleapis.com/css?family=Cantata+One|Montserrat|Coming+Soon|Roboto|Reenie+Beanie');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+/*
+Imperial red: #D02823;
+*/
+
+body {
+  background-color: black;
+}
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Montserrat';
+  color: white;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #D02823;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  /* make scrollbar transparent */
+}
+/***************************
+				Navigation
+****************************/
+
+.navbar-bg {
+  background-color: #D02823;
+}
+.navbar, .navbar-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+}
+/**************************
+				Jumbotron
+***************************/
+
+#video-main {
+  position: fixed;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  right: 0;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: -4;
+  transform: translateX(30%);
+}
+.video-filter {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: #D02823;
+  z-index: -3;
+  opacity: .4;
+}
+.video-filter {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background-image: -moz-linear-gradient(45deg, #000 25%, transparent 25%), -moz-linear-gradient(-45deg, #000 25%, transparent 25%), -moz-linear-gradient(45deg, transparent 75%, #000 75%), -moz-linear-gradient(-45deg, transparent 75%, #000 75%);
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, #000), color-stop(.25, transparent)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, #000), color-stop(.25, transparent)), -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, #000)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, #000));
+  background-image: -webkit-linear-gradient(45deg, #000 25%, transparent 25%), -webkit-linear-gradient(-45deg, #000 25%, transparent 25%), -webkit-linear-gradient(45deg, transparent 75%, #000 75%), -webkit-linear-gradient(-45deg, transparent 75%, #000 75%);
+  background-image: -o-linear-gradient(45deg, #000 25%, transparent 25%), -o-linear-gradient(-45deg, #000 25%, transparent 25%), -o-linear-gradient(45deg, transparent 75%, #000 75%), -o-linear-gradient(-45deg, transparent 75%, #000 75%);
+  background-image: linear-gradient(45deg, #000 25%, transparent 25%), linear-gradient(-45deg, #000 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #000 75%), linear-gradient(-45deg, transparent 75%, #000 75%);
+  -moz-background-size: 2px 2px;
+  background-size: 2px 2px;
+  -webkit-background-size: 2px 2.1px;
+  /* override value for webkit */
+  background-position: 0 0, 1px 0, 1px -1px, 0px 1px;
+}
+.buffer-zone {
+  width: 100%;
+  height: 100vh;
+}
+.content-text {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow: hidden;
+  z-index: -1;
+  border-right: 2px solid white;
+}
+.content-jumbotron-headline {
+  font-family: 'Cantata One';
+  font-size: 2.5em;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+.content-jumbotron-subline {
+  margin-left: 0px;
+  opacity: 0;
+  font-family: 'Montserrat';
+  font-size: 1.4em;
+  animation: slideRight 1s ease-in-out 1s forwards;
+}
+.down-arrow {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  animation: downArrow 2s ease-in-out infinite;
+  z-index: 800;
+}
+.index-num {
+  opacity: 0;
+}
+/***************************
+				Main Content
+****************************/
+
+.content-body {
+  background-color: black;
+  color: #D02823;
+  height: 100%;
+  box-shadow: 2px 2px 5px 5px rgba(100, 40, 40, .3);
+}
+.content-main {
+  background-color: #D02823;
+}
+.display-lg {
+  font-size: 2em;
+  font-family: 'Cantata One';
+}
+.section {
+  height: 500px;
+  background-color: blue;
+  border-bottom: 3px solid white;
+}
+.title-font {
+  font-family: 'Cantata One';
+}
+.content-title {
+  font-size: 1.5em;
+  line-height: 1.4;
+  border-left: 1px solid white;
+  padding: 0 0 0 15px;
+}
+.links li {
+  font-size: .8em;
+  margin-top: 2px;
+}
+.content-subtitle {
+  font-size: 1em;
+}
+.profile-img {
+  display: inline-block;
+  color: red;
+  height: 69px;
+  width: 69px;
+  margin: 0;
+  padding: 0;
+  /*margin: 2px 0 ;*/
+  background-color: white;
+}
+.profile-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.profile-img:first-child, .brandee {
+  background-image: url('../img/Gaara.png');
+  /*opacity: .5;*/
+}
+/*.profile-img:first-child:hover {
+	opacity: 1;
+}*/
+
+.profile-img:nth-child(2), .jim {
+  background-image: url('../img/Shikadai.png');
+}
+.profile-img:nth-child(3), .brian {
+  background-image: url('../img/Sasuke.png');
+}
+.profile-img:nth-child(4), .cory {
+  background-image: url('../img/Tsunade.png');
+}
+.profile-img:nth-child(5), .pat {
+  background-image: url('../img/Sakura.png');
+}
+.profile-img:nth-child(6), .rita {
+  background-image: url('../img/Kakashi.png');
+}
+.profile-img:nth-child(7), .paige {
+  background-image: url('../img/Sai_.png');
+}
+.profile-img:nth-child(8), .lyn {
+  background-image: url('../img/Naruto.png');
+}
+.profile-img:nth-child(9), .james {
+  background-image: url('../img/Yamato.png');
+}
+.profile-img:nth-child(10), .jeff {
+  background-image: url('../img/Rock.png');
+}
+.profile-img:nth-child(11), .rob {
+  background-image: url('../img/Hinata.png');
+}
+.profile-img:nth-child(12), .preston {
+  background-image: url('../img/Sai_.png');
+}
+.profile-img:nth-child(13), .steve {
+  background-image: url('../img/Sai_.png');
+}
+.profile-img:nth-child(14), .david {
+  background-image: url('../img/Sai_.png');
+}
+.profile-img:nth-child(15) {
+  background-image: url('../img/Sai_.png');
+}
+.brandee, .jim, .brian, .jeff, .cory, .rita, .james, .lyn, .preston, .rob, .paige, .steve, .david, .pat {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.arrow-left {
+  left: 30px;
+}
+/* Small devices (landscape phones, 576px and up)*/
+
+@media (min-width: 576px) {
+  .profile-img {
+    height: 75px;
+    width: 75px;
+  }
+}
+/* Medium devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+  .profile-img {
+    height: 75px;
+    width: 75px;
+  }
+}
+/***************************
+					style.html
+****************************/
+
+.style-html-background {
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/newdie.JPG');
+  position: fixed;
+  background-repeat: none;
+  z-index: -11;
+}
+.style-html-background:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: .3;
+}
+.red {
+  margin-top: 50px;
+  background-color: #D02823;
+  padding: 15px;
+  width: 100%;
+}
+.content-style-html {
+  margin-top: 150px;
+  padding: 0 10px;
+}
+.stock-title {
+  padding: 40px 0px 0px;
+}
+hr {
+  background-color: white;
+}
+.style-list-item {
+  display: inline-block;
+  margin-right: 30px;
+  margin-bottom: 15px;
+  opacity: .7;
+}
+.style-list-item:hover {
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+.style-list-item:active {
+  opacity: 1;
+}
+.img-product-scale {
+  width: 165px;
+  height: 165px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin: 5px;
+}
+.img-product-scale:hover {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  transition: transform .3s ease-in-out;
+  background-color: #ddd;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.date {
+  /*text-align: center;*/
+  font-size: .7em;
+}
+.img-product-scale {
+  opacity: 0;
+  animation: fade .5s forwards;
+}
+@keyframes fade {
+  100% {
+    opacity: 1;
+  }
+}
+/* Large devices (desktops, 992px and up)*/
+
+@media (min-width: 992px) {
+  /*	.style-html-background:after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  top: 0;
+
+  right: 0;
+  bottom: 0;
+  background-color:  #D02823;
+  opacity: 1;
+}*/
+  .slideLeft {
+    opacity: 0;
+    animation: slideLeft 3s forwards;
+    margin-right: -500px;
+  }
+  @keyframes slideLeft {
+    100% {
+      margin-right: auto;
+      opacity: 1;
+    }
+  }
+  /***********************
+					Navbar
+	************************/
+  .navbar-bg {
+    background-color: transparent;
+  }
+  /**********************
+				Jumbotron
+	***********************/
+  #video-main {
+    transform: translateX(0%);
+  }
+  .content-jumbotron-panel {
+    position: fixed;
+    content: "";
+    height: 130vh;
+    width: 40%;
+    z-index: -1;
+    background-color: #D02823;
+    top: 0;
+    right: 0;
+  }
+  .index-num {
+    opacity: 1;
+    font-family: 'Montserrat';
+    position: absolute;
+    bottom: 0px;
+    right: 60px;
+  }
+  .content-text {
+    position: absolute;
+    height: 348px;
+    left: -350px;
+    top: 40%;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    animation: floatUp 1s ease-out;
+    overflow: hidden;
+  }
+  .content-jumbotron-headline {
+    font-family: 'Cantata One';
+    font-size: 5em;
+    animation: none;
+  }
+  .content-jumbotron-subline {
+    opacity: 0;
+    font-family: 'Montserrat';
+    font-size: 2.5em;
+    animation: fadeIn .5s ease-in-out 1s forwards;
+  }
+  /*********************
+				Main Content
+	**********************/
+  .wrapper {
+    height: 500px;
+    background-color: #D02823;
+    margin-top: 200px;
+    position: relative;
+    box-shadow: 2px 2px 20px 3px rgba(100, 40, 40, .3);
+  }
+  .title {
+    height: ;
+    background-color: white;
+    width: 300px;
+    position: absolute;
+    top: -50px;
+    left: 50px;
+    z-index: 898;
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+    box-shadow: 2px 2px 10px 3px rgba(100, 40, 40, .3);
+  }
+  .display-title {
+    font-size: 1.5em;
+    font-family: 'Cantata One';
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .body {
+    height: 300px;
+    width: 50%;
+    background-color: white;
+    position: absolute;
+    top: 25%;
+    left: 50px;
+    z-index: 899;
+    box-shadow: 2px 2px 5px 3px rgba(100, 40, 40, .3);
+  }
+  .art {
+    height: 600px;
+    width: 45%;
+    background-color: lavender;
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    z-index: 897;
+    box-shadow: 2px 2px 10px 3px rgba(100, 40, 40, .3);
+    background-image: url('../img/test-img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .content-title {
+    font-size: 3em;
+    line-height: 1.4;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    padding: 0 0 0 15px;
+  }
+  .content-subtitle {
+    font-size: 1.4em;
+  }
+  /*	.profile-img {
+			height: 110px;
+			width: 110px;
+		}*/
+  /***********************************
+				Scroll Animations
+************************************/
+  @keyframes divBarLg {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      left: 0;
+      opacity: 1;
+    }
+  }
+  @keyframes divBarMd {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      left: 20%;
+      opacity: 1;
+    }
+  }
+  @keyframes divBarSm {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      left: 30%;
+      opacity: 1;
+    }
+  }
+  @keyframes divBarXs {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      left: 35%;
+      opacity: 1;
+    }
+  }
+  @keyframes divBarNano {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      left: 38%;
+      opacity: 1;
+    }
+  }
+  .divBars {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: -30px;
+    z-index: -10;
+  }
+  .divBar-lg {
+    z-index: -9;
+    height: 100%;
+    width: 20%;
+    background-color: #D02823;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 110%;
+    animation: divBarLg .5s ease-in-out forwards;
+  }
+  .divBar-md {
+    z-index: -8;
+    height: 100%;
+    width: 10%;
+    background-color: #D02823;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 110%;
+    animation: divBarMd .5s ease-in-out .1s forwards;
+  }
+  .divBar-sm {
+    z-index: -7;
+    height: 100%;
+    width: 5%;
+    background-color: #D02823;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 110%;
+    animation: divBarSm .5s ease-in-out .2s forwards;
+    ;
+  }
+  .divBar-xs {
+    z-index: -6;
+    height: 100%;
+    width: 3%;
+    background-color: #D02823;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 110%;
+    animation: divBarXs .5s ease-in-out .3s forwards;
+    ;
+  }
+  .divBar-nano {
+    z-index: -5;
+    height: 100%;
+    width: 2%;
+    background-color: #D02823;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 110%;
+    animation: divBarNano .5s ease-in-out .4s forwards;
+    ;
+  }
+  .profile-img {
+    display: inline-block;
+    height: 110px;
+    width: 110px;
+    margin: 5px;
+    background-color: white;
+    border-radius: 50%;
+  }
+  .see-us {
+    height: 60%;
+  }
+  .navbar-style-html {
+    position: static;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {}
+.modal-body h4, .modal-body p {
+  text-align: center;
+  color: black;
+  padding: 3px;
+}

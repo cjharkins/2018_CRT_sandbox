@@ -1,0 +1,4 @@
+@keyframes floatUp {0% {top: 100%;opacity: 0;}50% {opacity: 0;}80% {top: 39%;}100% {top: 40%;opacity: 1;}}
+@keyframes fadeIn {0%{top:100%;opacity: 0;font-size: 2.485em;}100%{font-size: 2.5em;top: 40%;opacity: 1;}}
+@keyframes downArrow {0%{top: 80%;opacity: 0;}90%{opacity: 1;top: 85%;}}
+@keyframes slideRight {0%{opacity:0;left:500px;}100%{left: 15px;top: 60%;padding-left: 15px;padding-right: 15px;overflow: hidden; margin-left: -15px;opacity:1;}}
